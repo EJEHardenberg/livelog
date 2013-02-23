@@ -23,7 +23,12 @@ echo $logString;
 				"getCurrentLog": true,
 			},
 			success: function(data){
-				$('#logOutput').html(data);
+			  var obj = $.parseJSON(data);
+			  $('.logOutput').append("<ul style='list-style-type:none'>");
+			  for(var ii=1; ii<6; ii++){
+// 				$('.logOutput').append("<li class='logItem'>"+obj[ii]+"</li>");
+			  }
+			  $('.logOutput').append("</ul>");
 			}		
 		});
 	},300);
@@ -32,7 +37,7 @@ echo $logString;
 </head>
 <body>
 <h3>The current contents of your logger:</h3>
-<div id="logOutput" style="border:solid 1px red; margin:auto; width:75%;">
+<div class="logOutput" style="border:solid 1px red; margin:auto; width:75%;">
 </div>
 
 <!-- <div id="blinker" style="border:solid 4px green"></div> -->

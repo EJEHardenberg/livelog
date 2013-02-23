@@ -25,7 +25,10 @@ function superLog($var){
 }
 
 // superLog(time());
-superLog("Hello Julie");
+$array = array(
+1=>"h",2=>"e",3=>"l",4=>"l",5=>"o");
+$jso = json_encode($array);
+superLog($jso);
 
 
 
