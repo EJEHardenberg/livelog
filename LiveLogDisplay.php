@@ -24,9 +24,12 @@ echo $logString;
 			},
 			success: function(data){
 			  var obj = $.parseJSON(data);
-			  $('.logOutput').append("<ul style='list-style-type:none'>");
+			  $('.logOutput').append("<ul >");
 			  for(var ii=1; ii<6; ii++){
-// 				$('.logOutput').append("<li class='logItem'>"+obj[ii]+"</li>");
+				$('.logOutput').html(
+				  "<li style='list-style-type:none' class='logItem'>File Name: "+obj.filename+"</li>"+
+				  "<li style='list-style-type:none' class='logItem'>Log Data: "+obj.logData+"</li>"
+				  );
 			  }
 			  $('.logOutput').append("</ul>");
 			}		
@@ -37,7 +40,7 @@ echo $logString;
 </head>
 <body>
 <h3>The current contents of your logger:</h3>
-<div class="logOutput" style="border:solid 1px red; margin:auto; width:75%;">
+<div class="logOutput" style="border:solid 1px red; padding:20px; margin:auto; width:75%;">
 </div>
 
 <!-- <div id="blinker" style="border:solid 4px green"></div> -->
