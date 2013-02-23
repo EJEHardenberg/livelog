@@ -37,10 +37,23 @@ echo $logString;
 	},300);
 //     });
   </script>
+  
+  <style type="text/css">
+    html{
+      background:url('images/kindajean.png');
+    }
+    .logOutput{
+      background:white;
+      -webkit-border-radius: 13px;
+      border-radius: 13px;
+      -webkit-box-shadow: inset 1px 1px 1px 1px rgba(2, 2, 2, 0.5);
+      box-shadow: inset 1px 1px 1px 1px rgba(2, 2, 2, 0.5);
+    }
+  </style>
 </head>
 <body>
 <h3>The current contents of your logger:</h3>
-<div class="logOutput" style="border:solid 1px red; padding:20px; margin:auto; width:75%;">
+<div class="logOutput" style="border:solid 3px #444; padding:20px; margin:auto; width:75%;">
 </div>
 
 <!-- <div id="blinker" style="border:solid 4px green"></div> -->
