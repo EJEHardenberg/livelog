@@ -1,6 +1,9 @@
 
 public class LiveLog{
-  public LiveLog(String data){
+  public LiveLog(){
+  }
+  
+  public void postToServer(String data){
     String urlParameters = "data="+data;
     String request = "http://localhost/LiveLogCatch.php";
     URL url = new URL(request); 
