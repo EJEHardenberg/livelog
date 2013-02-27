@@ -29,17 +29,6 @@ class LiveLog{
 	  curl_close($ch);
   } // end postLog
 
-}
-
-$ll = new LiveLog("test.php");
-$ll->postToServer(time());
-
-// superLog(time());
-// $array = array(
-// 1=>"h",2=>"e",3=>"l",4=>"l",5=>"o");
-// $jso = json_encode($array);
-// superLog($jso);
-
-
+} // end LiveLog class def
 
 ?>

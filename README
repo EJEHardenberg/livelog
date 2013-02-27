@@ -1,0 +1,13 @@
+LiveLog is a simple cross-platform code-logging library. 
+
+Usage: 
+  - import/include the LiveLog client class in your code
+  - create an instance of LiveLog(String filename)
+  - call the public method postToServer(String data-to-be-logged)
+  - view updated code on web page
+  
+  
+
+Development needs: 
+  - Make clients for all programming languages
+  - Add session-specific outputs (currently all users use the same log.txt -> confining us to 1 user)
