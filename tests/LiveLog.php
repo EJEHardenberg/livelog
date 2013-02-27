@@ -15,6 +15,7 @@ class LiveLog{
 	  $url = 'http://localhost/LiveLog/front_end/LiveLogCatch.php';
 	  $arr = array('filename'=>$this->filename, 'logData'=>$var); 
 	  $data = 'data='.json_encode($arr)."&sessionID=".$this->sessionID;
+	  // $data = 'data='."working?"."&sessionID=".$this->sessionID;
 
 	  //open connection
 	  $ch = curl_init();
