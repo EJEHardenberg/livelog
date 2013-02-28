@@ -45,29 +45,39 @@
       })
     </script>
 
-    <style type="text/css">
-      #session{
-        display:none;
-      }
-
-      ul{
-        list-style-type: none;
-      }
-    </style>
+   <link rel="stylesheet" href="style.css">
   </head>
   
   <body>
     <div id="welcome">
+        Welcome to LiveLog, the ease web-based code debugger.
+        <div>
+          Using LiveLog is simple:
+            <ul>
+              <li>1. Download the client code for the language you are working in.</li>
+              <li>2. Include the file in whichever code you want to debug.</li>
+              <li>3. Start a new debugging session on this page, and view the output of your code.</li>
+            </ul>
+
+            <ul>
+              <li>Available clients</li>
+              <li><a href="../clients/LiveLog.java.zip">Java</a><span class="usage javaUsage">usage</span></li>
+              <li><a href="../clients/LiveLog.php.zip">PHP</a><span class="usage phpUsage">usage</span></li>
+              <li><a href="../clients/LiveLog.python.zip">Python</a><span class="usage pythonUsage">usage</span></li>
+            </ul>
+
+
+
       <ul>
         <li>Create New Logging Session</li>
         <li><input type="button" value="go" id="goButton"></li>
       </ul>
     </div>
+  </div>
 
     <div id="session">
       <ul>
-        <li>Your session ID (2nd argument sent to new instance of LiveLog client)</li>
-        <li id="sessionHolder"></li>
+        <li>Your session ID: <span id="sessionHolder"></span></li>
       </ul>
 
       Log Content:
