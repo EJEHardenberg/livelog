@@ -27,9 +27,18 @@ class LiveLog():
 		'''
 		url = 'http://localhost/LiveLog/front_end/LiveLogCatch.php'
 		arr = {'filename':self.fileName, 'logData':var}
-		data = 'data=' + json.dumps(arr) + '&sessionID=' + self.sessionID
-		# data = 'data=sup&sessionID='+self.sessionID
+		# data = 'data=' + json.dumps(arr) + '&sessionID=' + self.sessionID
+		
+		mydata = [('data', 'somedata'), ('sessionID', '0000')]
+		data = urllib.urlencode(mydata)
 
 		request = urllib2.Request(url, data)
+		response = urllib2.urlopen(request)
+
 		# print help(request)
+		print "Data we have sent:"
 		print request.get_data()
+		print "\n"
+		# print help(response)
+		print "response we have received:"
+		print response.read()
