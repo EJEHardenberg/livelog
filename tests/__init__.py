@@ -1,0 +1,1 @@
+#so packaging will work and i can import Livelog.py into client test code

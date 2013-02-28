@@ -1,5 +1,8 @@
 <?php
 // include "log.php";
+echo("got to LiveLogCatch\n");
+var_dump($_POST);
+
 if($_POST['data'] && $_POST['sessionID']){
   $data = $_POST['data'];
   $sessionID = $_POST['sessionID'];
