@@ -1,0 +1,26 @@
+      html{
+      	background-image: url('images/otis_redding.png');
+      	color:#111;
+      }
+
+      #session{
+        display:none;
+      }
+
+      .logContent{
+      	padding:20px;
+      	background-image: url('images/white_bed_sheet.png');
+      	border:solid 1px #333;
+      }
+
+      ul{
+        list-style-type: none;
+      }
+
+      .usage{
+      	margin-left:10px;
+      }
+
+      #sessionHolder{
+      	color:#8F243E;
+      }
