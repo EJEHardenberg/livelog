@@ -1,8 +1,11 @@
+      @import url(http://fonts.googleapis.com/css?family=Roboto);
+
       html{
       	background-image: url('images/otis_redding.png');
       	color:#111;
             margin:0px;
             padding:0px;
+            font-family: 'Roboto', sans-serif;
       }
 
       div, body{
@@ -33,7 +36,7 @@
             -webkit-border-radius: 5px;
             border-radius: 5px;
             padding:10px;
-            width:500px;
+            width:600px;
             height:350px;
             margin:auto;
             background:white;
@@ -54,12 +57,14 @@
       	color:#8F243E;
       }
 
-      .debug{
+      .debugBlock{
             margin-top:30px;
       }
 
-      #test{
+      .debug{
+            border:solid 1px black;
             background:#ddd;
+            min-height:20px;
       }
 
       .downloadIcon{

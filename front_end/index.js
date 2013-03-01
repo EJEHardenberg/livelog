@@ -19,11 +19,11 @@
                     "sessionID": sessionID
                   },
                   success: function(data){
-                    $('#test').html(data);
+                    $('.raw').html(data);
                     try{
                       var obj = $.parseJSON(data);
                     }catch(err){
-                      $('#test').html(err);
+                      $('.err').html(err);
                     }
 
                     $('.phpBlock').html("");

@@ -46,9 +46,13 @@
         </div>
       </div>
 
-      <div class="debug">
-        Debug:
-        <div id="test">
+      <div class="debugBlock">
+        Json Errors:
+        <div class="err debug">
+        </div>
+
+        Raw Log Content: 
+        <div class="raw debug">
         </div>
       </div>
     </div> <!-- end session -->
