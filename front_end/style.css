@@ -19,6 +19,7 @@
       	padding:20px;
       	background-image: url('images/white_bed_sheet.png');
       	border:solid 1px #333;
+            margin-bottom:5px;
       }
 
       #welcome{
@@ -59,4 +60,42 @@
 
       #test{
             background:#ddd;
+      }
+
+      .downloadIcon{
+            float:right;
+      }
+
+      .logNest{
+            margin-bottom:20px;
+      }
+
+      .phpBlock{
+            padding:10px;
+            border:solid 1px purple;
+            background-color:#9999cc;
+      }
+
+      .phpBlock .logContent{
+            background-image: url('images/phpBackground.png');
+      }
+
+       .javaBlock{
+            padding:10px;
+            border:solid 1px purple;
+            background-color:#a4ca39;
+      }
+
+      .javaBlock .logContent{
+            background-image: url('images/javaBackground.png');
+      }
+
+       .pythonBlock{
+            padding:10px;
+            border:solid 1px purple;
+            background-color:#FFD140;
+      }
+
+      .pythonBlock .logContent{
+            background-image: url('images/pythonBackground.png');
       }

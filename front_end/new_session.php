@@ -11,6 +11,10 @@
     
     <script type="text/javascript">
     var sessionID = <? echo "'".$sessID."'"; ?>;
+    // test vars for multil logger sessions
+    var numPHP = 3;
+    var numJava = 2;
+    var numPython = 1;
     </script>
 
     <script src="index.js"></script>
@@ -24,8 +28,22 @@
         <li>Your session ID: <span id="sessionHolder"></span></li>
       </ul>
 
-      Log Content:
-      <div class="logContent">
+      <div class="phpLogNest logNest">
+        PHP <img class="downloadIcon" src="images/downloadIcon.png" height="25">
+        <div class="block phpBlock">
+        </div>
+      </div>
+
+      <div class="javaLogNest logNest">
+        Java
+        <div class="block javaBlock">
+        </div>
+      </div>
+
+      <div class="pythonLogNest logNest">
+        Python
+        <div class="block pythonBlock">
+        </div>
       </div>
 
       <div class="debug">

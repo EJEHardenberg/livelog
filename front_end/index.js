@@ -25,11 +25,27 @@
                     }catch(err){
                       $('#test').html(err);
                     }
-                    for(var ii=1; ii<6; ii++){
-                    $('.logOutput').html(
-                      "<div class='logItem'>File Name: "+obj.filename+"</div>"+
-                      "<div class='logItem'>Log Data: "+obj.logData+"</div>"
-                      );
+
+                    $('.phpBlock').html("");
+                    $('.javaBlock').html("");
+                    $('.pythonBlock').html("");
+
+                    for(var ii=0; ii<numPHP; ii++){
+                      $('.phpBlock').append(
+                          "<div class='logContent phpLog'></div>"
+                        );
+                    }
+
+                    for(var ii=0; ii<numJava; ii++){
+                      $('.javaBlock').append(
+                          "<div class='logContent javaLog'></div>"
+                        );
+                    }
+
+                    for(var ii=0; ii<numPython; ii++){
+                      $('.pythonBlock').append(
+                          "<div class='logContent pythonLog'></div>"
+                        );
                     }
                     // $('.logOutput').append("</ul>");
                   }   
