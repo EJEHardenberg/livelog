@@ -12,7 +12,7 @@
         //       $('#blinker').toggle();
                 $.ajax({
                   type: "POST",
-                  url: "http://localhost/LiveLog/front_end/LiveLogDisplay.php",
+                  url: "http://"+basedir+"/LiveLog/front_end/LiveLogDisplay.php",
                   // url: "http://localhost/chrome_extensions/sharetosave_v2/sharetosave_server/addBookmark.php",
                   data: {
                     "getCurrentLog": true,

@@ -1,8 +1,10 @@
 <?php
+  require_once "../config/config.php";
+  
   if(!$_SESSION){
     session_start();
   }
-  
+
   $sessID = session_id();
 ?>
 <html>
@@ -11,6 +13,7 @@
     
     <script type="text/javascript">
     var sessionID = <? echo "'".$sessID."'"; ?>;
+    var basedir = <? echo "'" . BASEDIR . "'"; ?>;
     // test vars for multil logger sessions
     var numPHP = 3;
     var numJava = 2;
