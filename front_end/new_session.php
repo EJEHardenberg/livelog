@@ -51,11 +51,11 @@
 
       <div class="debugBlock">
         Json Errors:
-        <div class="err debug">
+        <div class="err debug block">
         </div>
 
         Raw Log Content: 
-        <div class="raw debug">
+        <div class="raw debug block">
         </div>
       </div>
     </div> <!-- end session -->

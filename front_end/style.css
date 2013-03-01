@@ -104,3 +104,7 @@
       .pythonBlock .logContent{
             background-image: url('images/pythonBackground.png');
       }
+
+      .block{
+            word-wrap:break-word;
+      }
