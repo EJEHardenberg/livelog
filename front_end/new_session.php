@@ -26,11 +26,10 @@
   </head>
   
   <body>
+    <div id="sessionContainer">
+      <div id="sessionNest">Your session ID: <span id="sessionHolder"></span></div>
+    </div>
     <div id="session">
-      <ul>
-        <li>Your session ID: <span id="sessionHolder"></span></li>
-      </ul>
-
       <div class="phpLogNest logNest">
         PHP <img class="downloadIcon" src="images/downloadIcon.png" height="25">
         <div class="block phpBlock">
@@ -72,11 +71,11 @@
             <li>3. Start a new debugging session on this page, and view the output of your code.</li>
           </ul>
 
-          <ul>
-            <li>Available clients</li>
-            <li><a href="../clients/LiveLog.java.zip">Java</a><span class="usage javaUsage">usage</span></li>
-            <li><a href="../clients/LiveLog.php.zip">PHP</a><span class="usage phpUsage">usage</span></li>
-            <li><a href="../clients/LiveLog.python.zip">Python</a><span class="usage pythonUsage">usage</span></li>
+          <ul class="downloadClients">
+            <li class="dcTitle">Available clients</li>
+            <li class="clientItem"><a href="../clients/LiveLog.java.zip">Java</a><span class="usage javaUsage">usage</span></li>
+            <li class="clientItem"><a href="../clients/LiveLog.php.zip">PHP</a><span class="usage phpUsage">usage</span></li>
+            <li class="clientItem"><a href="../clients/LiveLog.python.zip">Python</a><span class="usage pythonUsage">usage</span></li>
           </ul>
           <ul>
             <li>Create New Logging Session</li>

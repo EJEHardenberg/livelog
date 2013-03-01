@@ -13,9 +13,45 @@
             padding:0px;
       }
 
+      .downloadClients{
+            padding:5px;
+            background-color:#bbb;
+            border:solid 1px #333;
+      }
+
+      .dcTitle{
+            margin-bottom:5px;
+            font-weight:bold;
+      }
+
+      .clientItem{
+            background:#cdcdcd;
+            padding:1px 0px 1px 3px;
+            font-size:0.9em;
+      }
+
+
+
       #session{
+            margin-top:20px;
         display:none;
         padding:20px;
+      }
+
+      #sessionContainer{
+            display:none;
+            width:100%;
+            position:fixed;
+            top:0px;
+      }
+
+      #sessionNest{
+            text-align:center;
+            width:400px;
+            padding:10px;
+            background:#ddd;
+            margin:auto;
+            border:solid 1px black;
       }
 
       .logContent{

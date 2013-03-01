@@ -5,6 +5,7 @@
           
           $('#welcome').fadeOut(function(){
             $('#session').fadeIn();
+            $('#sessionContainer').fadeIn();
           });
           
           var counter = 0
