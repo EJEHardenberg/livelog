@@ -33,13 +33,13 @@
         <div id="test">
         </div>
       </div>
-    </div>
+    </div> <!-- end session -->
 
 
 
       <div id="welcome">
         <div class="nest welcomeNest">
-        Welcome to LiveLog, the ease web-based code debugger.
+        Welcome to LiveLog, the easy web-based code debugger.
           Using LiveLog is simple:
           <ul>
             <li>1. Download the client code for the language you are working in.</li>
