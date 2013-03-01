@@ -20,7 +20,7 @@
               },
               success: function(data){
                 // append raw data received from server
-                $('.raw').append("\n"+data);
+                $('.raw').append("<br />"+data);
                 try{
                   var obj = $.parseJSON(data);
                 }catch(err){
