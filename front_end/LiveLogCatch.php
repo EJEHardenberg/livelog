@@ -1,8 +1,9 @@
 <?php
 // include "log.php";
-echo("got to LiveLogCatch\n");
-var_dump($_POST);
+// echo("Contents of the POST variabe\n");
+// var_dump($_POST);
 
+//catch the post from the client to the server, generate the file
 if($_POST['data'] && $_POST['sessionID']){
   $data = $_POST['data'];
   $sessionID = $_POST['sessionID'];

@@ -1,5 +1,5 @@
 <?php
-// responds to ajax query for log data
+// responds to ajax query for log data. parses the file into json
 
 // echo "working";
 if($_POST && $_POST['getCurrentLog'] && $_POST['sessionID']){

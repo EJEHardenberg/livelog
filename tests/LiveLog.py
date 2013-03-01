@@ -3,7 +3,7 @@
 	Used to communicate, via POST requests, with the logging server. Instances of this are to be created and operated on by the 
 	client code.
 '''
-import json, urllib, urllib2
+import json, urllib, urllib2, inspect
 
 class LiveLog():
 	fileName = None
@@ -25,11 +25,19 @@ class LiveLog():
 			@params:
 				var, the variable that the client wishes to log on the server
 		'''
+		# frame,filename,line_number,function_name,lines,index = inspect.getouterframes(inspect.currentframe())[1]
+		lineNumber = inspect.getouterframes(inspect.currentframe())[1][2]
 		url = 'http://localhost/LiveLog/front_end/LiveLogCatch.php'
-		arr = {'filename':self.fileName, 'logData':var}
+		arr = {'filename':self.fileName, 'logData':var, 'lineNumber':lineNumber}
 		data = 'data=' + json.dumps(arr) + '&sessionID=' + self.sessionID
-		# data = 'data=sup&sessionID='+self.sessionID
 
 		request = urllib2.Request(url, data)
+		response = urllib2.urlopen(request)
+
 		# print help(request)
-		print request.get_data()
+		# print "Data we have sent:"
+		# print request.get_data()
+		# print "\n"
+		# # print help(response)
+		# print "response we have received:"
+		# print response.read()
