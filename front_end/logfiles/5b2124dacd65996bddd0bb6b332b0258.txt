@@ -1,0 +1,1 @@
+{\"logData\": \"ohhh yeaaaah\", \"lineNumber\": 10, \"filename\": \"test.py\"}
