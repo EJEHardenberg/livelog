@@ -25,6 +25,8 @@
         }
       })
 
+
+
 function loadContent(){
       var counter = 0
           var t = setInterval(function(){
@@ -40,8 +42,16 @@ function loadContent(){
               success: function(data){
                 // append raw data received from server
                 $('.raw').html(data);
+
+                // try catch for parsing json
                 try{
                   var obj = $.parseJSON(data);
+                  // test if the json is an array oran object, and parse
+                  if(isJsonArray(obj)){
+                    parseJsonArray(obj);
+                  }else{
+                    parseJsonObj(obj);
+                  }
                 }catch(err){
                   $('.err').html(err);
                 }
@@ -52,7 +62,7 @@ function loadContent(){
 
                 for(var ii=0; ii<numPHP; ii++){
                   $('.phpBlock').append(
-                          "<div class='logContent phpLog'>"+obj+"</div>"
+                          "<div class='logContent phpLog'>"+obj[0]+"</div>"
                   );
                 }
 
@@ -70,4 +80,13 @@ function loadContent(){
               }   // end success()
             });  // end ajax
           },3000); // end setinterval
+} // end loadConten
+
+// utility function for testing whether json is in object format or array format
+function isJsonArray(jsonObj){
+  if(jsonObj[0]!= undefined){
+    return true;
+  }else{
+    return false;
+  }
 }

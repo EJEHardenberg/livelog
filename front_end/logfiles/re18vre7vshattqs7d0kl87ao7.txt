@@ -1,1 +1,1 @@
-{\"filename\":\"filename.php\",\"logData\":\"testdata 123\"}
+{"filename":"filename.php","sessionID":"re18vre7vshattqs7d0kl87ao7"}
