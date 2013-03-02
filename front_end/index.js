@@ -42,15 +42,16 @@ function loadContent(){
               success: function(data){
                 // append raw data received from server
                 $('.raw').html(data);
+                var output = "";
 
                 // try catch for parsing json
                 try{
                   var obj = $.parseJSON(data);
                   // test if the json is an array oran object, and parse
                   if(isJsonArray(obj)){
-                    parseJsonArray(obj);
+                    output = parseJsonArray(obj);
                   }else{
-                    parseJsonObj(obj);
+                    output = parseJsonObj(obj);
                   }
                 }catch(err){
                   $('.err').html(err);
@@ -62,7 +63,9 @@ function loadContent(){
 
                 for(var ii=0; ii<numPHP; ii++){
                   $('.phpBlock').append(
-                          "<div class='logContent phpLog'>"+obj[0]+"</div>"
+                        "<div class='phpFile'>File "+ii+
+                          "<div class='logContent phpLog'>"+output+"</div>"+
+                        "</div>"
                   );
                 }
 
@@ -80,7 +83,17 @@ function loadContent(){
               }   // end success()
             });  // end ajax
           },3000); // end setinterval
-} // end loadConten
+} // end loadContent
+
+function parseJsonArray(obj){
+  var out = "Array{"; // holds our output to be returned
+  // alert(obj.length);
+  for(var ii=0; ii<obj.length; ii++){
+    out += "<br />&nbsp;&nbsp;["+ii+"] = "+obj[ii];
+  }
+  out += "<br />}<br />"
+  return out;
+}
 
 // utility function for testing whether json is in object format or array format
 function isJsonArray(jsonObj){
