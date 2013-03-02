@@ -1,6 +1,7 @@
 
       $(document).ready(function(){
-        $('#goButton').click(function(){
+        
+        if(skipWelcome == 1){
           $('#sessionHolder').html(sessionID);
           
           $('#welcome').fadeOut(function(){
@@ -8,7 +9,24 @@
             $('#sessionContainer').fadeIn();
           });
           
-          var counter = 0
+          loadContent();
+        }else{
+          $('#goButton').click(function(){
+            $('#sessionHolder').html(sessionID);
+            
+            $('#welcome').fadeOut(function(){
+              $('#session').fadeIn();
+              $('#sessionContainer').fadeIn();
+            });
+            
+            loadContent();
+        
+          }); // end $('go').click()
+        }
+      })
+
+function loadContent(){
+      var counter = 0
           var t = setInterval(function(){
           
           // grab server data
@@ -34,7 +52,7 @@
 
                 for(var ii=0; ii<numPHP; ii++){
                   $('.phpBlock').append(
-                          "<div class='logContent phpLog'></div>"
+                          "<div class='logContent phpLog'>"+obj+"</div>"
                   );
                 }
 
@@ -52,5 +70,4 @@
               }   // end success()
             });  // end ajax
           },3000); // end setinterval
-        }); // end $('go').click()
-      })
+}

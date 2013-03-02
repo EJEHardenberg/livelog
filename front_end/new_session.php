@@ -1,19 +1,25 @@
 <?php
   require_once "../config/config.php";
+  $skipWelcome = 0;
   
   if(!$_SESSION){
     session_start();
+  }
+
+  if($_GET['skipWelcome']){
+    $skipWelcome = 1;
   }
 
   $sessID = session_id();
 ?>
 <html>
   <head>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="jquery.min.js"></script>
     
     <script type="text/javascript">
     var sessionID = <? echo "'".$sessID."'"; ?>;
     var basedir = <? echo "'" . BASEDIR . "'"; ?>;
+    var skipWelcome = <? echo $skipWelcome; ?>;
     // test vars for multil logger sessions
     var numPHP = 3;
     var numJava = 2;

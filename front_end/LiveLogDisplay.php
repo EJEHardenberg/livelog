@@ -9,6 +9,7 @@ if($_POST && $_POST['getCurrentLog'] && $_POST['sessionID']){
 	}else{
 		// get the contents of our log file
 		$logString = file_get_contents("logfiles/".$_POST['sessionID'].".txt");
+		// header("Content-Type: application/json");
 		echo $logString;
 	}
 }
