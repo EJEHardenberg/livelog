@@ -64,6 +64,7 @@ function loadContent(){
                 for(var ii=0; ii<numPHP; ii++){
                   $('.phpBlock').append(
                         "<div class='phpFile'>File "+ii+
+                        "<div class='collapse'>collapse</div>"+
                           "<div class='logContent phpLog'>"+output+"</div>"+
                         "</div>"
                   );
@@ -80,6 +81,11 @@ function loadContent(){
                           "<div class='logContent pythonLog'></div>"
                   );
                 }
+
+                $('.collapse').click(function(){
+                  $(this).parent().find('.logContent').slideUp();
+                });
+
               }   // end success()
             });  // end ajax
           },3000); // end setinterval
@@ -102,4 +108,8 @@ function isJsonArray(jsonObj){
   }else{
     return false;
   }
+}
+
+function collapseContent(domObj){
+  domObj.slideUp();
 }
