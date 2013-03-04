@@ -5,8 +5,7 @@
           $('#sessionHolder').html(sessionID);
           
           $('#welcome').fadeOut(function(){
-            $('#session').fadeIn();
-            $('#sessionContainer').fadeIn();
+
           });
           
           checkForNewContent();
@@ -15,8 +14,7 @@
             $('#sessionHolder').html(sessionID);
             
             $('#welcome').fadeOut(function(){
-              $('#session').fadeIn();
-              $('#sessionContainer').fadeIn();
+              $('#loading').show();
             });
             
             checkForNewContent();
@@ -79,6 +77,11 @@ function retrieveLogData(){
                 "sessionID": sessionID
               },
               success: function(data){
+              	$('#loading').fadeOut(function(){
+	              	$('#session').fadeIn();
+	              	$('#sessionContainer').fadeIn();
+	              });
+
                 // append raw data received from server
                 $('.raw').html(data);
                 var output = "";
@@ -102,8 +105,8 @@ function retrieveLogData(){
 
                 for(var ii=0; ii<numPHP; ii++){
                   $('.phpBlock').append(
-                        "<div class='phpFile'>File "+ii+
-                        "<div class='collapse'>collapse</div>"+
+                        "<div class='phpFile fileBlock'>File "+ii+
+                        "<div class='folds'></div>"+
                           "<div class='logContent phpLog'>"+output+"</div>"+
                         "</div>"
                   );
@@ -121,8 +124,16 @@ function retrieveLogData(){
                   );
                 }
 
-                $('.collapse').click(function(){
-                  $(this).parent().find('.logContent').slideUp();
+                $('.folds').addClass("expanded");
+
+                $('.folds').click(function(){
+                	if($(this).hasClass("expanded")){
+                		$(this).removeClass("expanded").addClass("collapsed");
+                  	$(this).parent().find('.logContent').slideUp();
+                  }else{
+                  	$(this).addClass("expanded").removeClass("collapsed");
+                  	$(this).parent().find('.logContent').slideDown();
+                  }
                 });
 
               }   // end success()

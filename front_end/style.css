@@ -62,9 +62,21 @@
             margin-bottom:5px;
       }
 
-      .collapse{
+      .folds{
             display:inline-block;
             float:right;
+            width:20px;
+            height:20px;
+      }
+
+      .expanded{
+            background-image:url('images/collapse.png');
+            background-repeat: no-repeat;
+      }
+
+      .collapsed{
+            background-image:url('images/expand.png');
+            background-repeat: no-repeat;
       }
 
       #welcome{
@@ -85,6 +97,13 @@
             -webkit-box-shadow:  1px 3px 3px 3px rgba(0, 0, 0, 0.3);
             box-shadow:  1px 3px 3px 3px rgba(0, 0, 0, 0.3);
             z-index:100;
+      }
+
+      #loading{
+            display:none;
+            position:absolute;
+            top:30%;
+            left:48%;
       }
 
       ul{
@@ -115,6 +134,11 @@
 
       .logNest{
             margin-bottom:20px;
+      }
+
+      .fileBlock{
+            border:solid 1px #aaa;
+            padding:3px;
       }
 
       .phpBlock{

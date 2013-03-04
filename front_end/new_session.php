@@ -37,7 +37,7 @@
     </div>
     <div id="session">
       <div class="phpLogNest logNest">
-        PHP <img class="downloadIcon" src="images/downloadIcon.png" height="25">
+        PHP 
         <div class="block phpBlock">
         </div>
       </div>
@@ -92,6 +92,7 @@
   </div> <!-- end welcome -->
 
   <input type="hidden" id="lastUpdated">
+  <img src="images/ajax-loader.gif" id="loading">
 
 
   </body>
