@@ -14,7 +14,7 @@ $ll = new LiveLog("index.php", "5b2124dacd65996bddd0bb6b332b0258");
 	</head>
 
 	<body>
-		<p>sooo you got here at least. now check <a href="http://localhost/livelog/front_end/new_session.php">here</a></p>
+		<p>sooo you got here at least. now check <a href="http://localhost/LiveLog/front_end/new_session.php">here</a></p>
 	  <?php  
 	  	$testVariable = "foo";
 	  	//this calls the actual loggin function

@@ -9,7 +9,7 @@
             $('#sessionContainer').fadeIn();
           });
           
-          loadContent();
+          checkForNewContent();
         }else{
           $('#goButton').click(function(){
             $('#sessionHolder').html(sessionID);
@@ -19,7 +19,7 @@
               $('#sessionContainer').fadeIn();
             });
             
-            loadContent();
+            checkForNewContent();
         
           }); // end $('go').click()
         }
@@ -27,12 +27,51 @@
 
 
 
-function loadContent(){
-      var counter = 0
-          var t = setInterval(function(){
-          
-          // grab server data
-          $.ajax({
+function checkForNewContent(){
+	var counter = 0
+	var t = setInterval(function(){
+		$.ajax({
+			type: "POST",
+			url: "http://"+basedir+"/LiveLog/front_end/isLogUpdated.php",
+			data: {
+				"sessionID": sessionID
+			},
+			success: function(data){
+				if(data>$('#lastUpdated').val()){
+					$('#lastUpdated').val(data);
+					retrieveLogData();
+				}
+			}
+		});
+	},3000); // end setinterval
+} // end loadContent
+
+function parseJsonArray(obj){
+  var out = "Array{"; // holds our output to be returned
+  // alert(obj.length);
+  for(var ii=0; ii<obj.length; ii++){
+    out += "<br />&nbsp;&nbsp;["+ii+"] = "+obj[ii];
+  }
+  out += "<br />}<br />"
+  return out;
+}
+
+// utility function for testing whether json is in object format or array format
+function isJsonArray(jsonObj){
+  if(jsonObj[0]!= undefined){
+    return true;
+  }else{
+    return false;
+  }
+}
+
+function collapseContent(domObj){
+  domObj.slideUp();
+}
+
+function retrieveLogData(){
+  // grab server data
+      $.ajax({
               type: "POST",
               url: "http://"+basedir+"/LiveLog/front_end/LiveLogDisplay.php",
               data: {
@@ -88,28 +127,4 @@ function loadContent(){
 
               }   // end success()
             });  // end ajax
-          },3000); // end setinterval
-} // end loadContent
-
-function parseJsonArray(obj){
-  var out = "Array{"; // holds our output to be returned
-  // alert(obj.length);
-  for(var ii=0; ii<obj.length; ii++){
-    out += "<br />&nbsp;&nbsp;["+ii+"] = "+obj[ii];
-  }
-  out += "<br />}<br />"
-  return out;
-}
-
-// utility function for testing whether json is in object format or array format
-function isJsonArray(jsonObj){
-  if(jsonObj[0]!= undefined){
-    return true;
-  }else{
-    return false;
-  }
-}
-
-function collapseContent(domObj){
-  domObj.slideUp();
 }

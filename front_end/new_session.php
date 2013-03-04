@@ -91,6 +91,8 @@
     </div>
   </div> <!-- end welcome -->
 
+  <input type="hidden" id="lastUpdated">
+
 
   </body>
 
