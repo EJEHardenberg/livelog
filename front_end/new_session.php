@@ -37,7 +37,8 @@
     </div>
     <div id="session">
       <div class="phpLogNest logNest">
-        PHP 
+       <!--  <img src="images/php-logo.png" width="80"> -->
+       PHP
         <div class="block phpBlock">
         </div>
       </div>
