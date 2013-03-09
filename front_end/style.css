@@ -1,0 +1,187 @@
+      @import url(http://fonts.googleapis.com/css?family=Roboto);
+
+      html{
+            background-image: url('images/otis_redding.png');
+            color:#111;
+            margin:0px;
+            padding:0px;
+            font-family: 'Roboto', sans-serif;
+      }
+
+      div, body{
+            margin:0px;
+            padding:0px;
+      }
+
+      .downloadClients{
+            padding:5px;
+            background-color:#bbb;
+            border:solid 1px #333;
+      }
+
+      .dcTitle{
+            margin-bottom:5px;
+            font-weight:bold;
+      }
+
+      .clientItem{
+            background:#cdcdcd;
+            padding:1px 0px 1px 3px;
+            font-size:0.9em;
+      }
+
+
+
+      #session{
+            margin-top:20px;
+            display:none;
+            padding:20px;
+      }
+
+      #sessionContainer{
+            display:none;
+            width:100%;
+            position:fixed;
+            top:0px;
+      }
+
+      #sessionNest{
+            text-align:center;
+            width:40%;
+            min-width:400px;
+            padding:10px;
+            background:#ddd;
+            margin:auto;
+            border:solid 1px black;
+      }
+
+      .logContent{
+            padding:20px;
+            background-image: url('images/white_bed_sheet.png');
+            border:solid 1px #333;
+            margin-bottom:5px;
+
+      }
+
+      .folds{
+            display:inline-block;
+            float:right;
+            width:20px;
+            height:20px;
+            cursor: pointer;
+            position:relative;
+            z-index:101;
+      }
+
+      .expanded{
+            background-image:url('images/collapse.png');
+            background-repeat: no-repeat;
+      }
+
+      .collapsed{
+            background-image:url('images/expand.png');
+            background-repeat: no-repeat;
+      }
+
+      #welcome{
+            width:100%;
+            height:100%;
+            padding:100px 0px 0px 0px;
+            background-image:url("images/80Black.png");
+      }
+
+      .welcomeNest{
+            -webkit-border-radius: 5px;
+            border-radius: 5px;
+            padding:10px;
+            width:600px;
+            height:350px;
+            margin:auto;
+            background:white;
+            -webkit-box-shadow:  1px 3px 3px 3px rgba(0, 0, 0, 0.3);
+            box-shadow:  1px 3px 3px 3px rgba(0, 0, 0, 0.3);
+            z-index:100;
+      }
+
+      #loading{
+            display:none;
+            position:absolute;
+            top:30%;
+            left:48%;
+      }
+
+      ul{
+        list-style-type: none;
+      }
+
+      .usage{
+            margin-left:10px;
+      }
+
+      #sessionHolder{
+            color:#8F243E;
+      }
+
+      .debugBlock{
+            margin-top:30px;
+      }
+
+      .debug{
+            border:solid 1px black;
+            background:#ddd;
+            min-height:20px;
+      }
+
+      .downloadIcon{
+            float:right;
+      }
+
+      .logNest{
+            margin-bottom:20px;
+      }
+
+      .fileBlock{
+            border:solid 1px #aaa;
+            padding:3px;
+            
+      }
+
+      .phpFile{
+            background:#7777bb;
+      }
+
+      .phpBlock{
+            padding:10px;
+            border:solid 1px purple;
+            background-color:#9999cc;
+            -webkit-border-radius: 4px;
+            border-radius: 4px;
+      }
+
+      .phpBlock .logContent{
+            background-image: url('images/phpBackground.png');
+      }
+
+       .javaBlock{
+            padding:10px;
+            border:solid 1px purple;
+            background-color:#a4ca39;
+      }
+
+      .javaBlock .logContent{
+            background-image: url('images/javaBackground.png');
+      }
+
+       .pythonBlock{
+            padding:10px;
+            border:solid 1px purple;
+            background-color:#FFD140;
+      }
+
+      .pythonBlock .logContent{
+            background-image: url('images/pythonBackground.png');
+      }
+
+      .block{
+            word-wrap:break-word;
+      }
