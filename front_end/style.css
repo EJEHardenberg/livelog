@@ -56,9 +56,15 @@
       }
 
       .logContent{
+<<<<<<< HEAD
             padding:20px;
             background-image: url('images/white_bed_sheet.png');
             border:solid 1px #333;
+=======
+      	padding:20px;
+      	background-image: url('images/white_bed_sheet.png');
+      	border:solid 1px #333;
+>>>>>>> 532c0ca2758fabbdaab4445ef417f673962a1b23
             margin-bottom:5px;
 
       }
@@ -115,11 +121,19 @@
       }
 
       .usage{
+<<<<<<< HEAD
             margin-left:10px;
       }
 
       #sessionHolder{
             color:#8F243E;
+=======
+      	margin-left:10px;
+      }
+
+      #sessionHolder{
+      	color:#8F243E;
+>>>>>>> 532c0ca2758fabbdaab4445ef417f673962a1b23
       }
 
       .debugBlock{
