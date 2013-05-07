@@ -1,2 +1,5 @@
 #Ignore the actual configuration file for privacies sake
 config.php
+
+#Ignore log files
+front_end/logfiles/*
