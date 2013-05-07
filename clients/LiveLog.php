@@ -1,5 +1,8 @@
 <?php
 
+//Include BASEDIR
+require_once("config/config.php");
+
 class LiveLog{
   public $filename;
   public $sessionID;
@@ -14,7 +17,7 @@ class LiveLog{
   public function postToServer($var){
 	  //where are we posting to?
 // 	  $url = 'http://slimdowndesign.com/LiveLog/front_end/LiveLogCatch.php';
-	  $url = 'http://localhost/LiveLog/front_end/LiveLogCatch.php';
+	  $url = 'http://'.BASEDIR.'front_end/LiveLogCatch.php';
 	  $arr = array('filename'=>$this->filename, 'logData'=>$var); 
 	  $data = 'data='.json_encode($arr)."&sessionID=".$this->sessionID;
 
@@ -35,7 +38,7 @@ class LiveLog{
   
   private function beginNewLog(){
 //    $url = 'http://slimdowndesign.com/LiveLog/front_end/LiveLogCatch.php';
-$url = 'http://localhost/LiveLog/front_end/LiveLogCatch.php';
+$url = 'http://'.BASEDIR.'LiveLog/front_end/LiveLogCatch.php';
    $data = 'beginSession='.$this->sessionID;
    //open connection
    $ch = curl_init();
