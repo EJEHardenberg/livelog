@@ -3,6 +3,11 @@ LiveLog.rb
 This is the ruby client of LiveLog. 
 
 Require this class to your code and use the public methods of postToServer to send information to the live log front end
+
+Usage is like so:
+logger = LiveLog::Logger.new('session ID from live log')
+logger.postToServer("Debug Messages make me jump for joy!")
+
 =end
 
 require 'net/http'
