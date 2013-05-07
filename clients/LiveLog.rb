@@ -46,6 +46,8 @@ module LiveLog
 			#Send the var to the server for viewing
 			#Catch the next to last calling party, but if we're at root level then just grab that
 			callingFunc = caller[1] == nil ? caller[0] : caller[1]
+			callingLine =  callingFunc.scan(/:([0-9]*)/).flatten[0]
+			fname = __FILE__.scan(/([^\/]+$)/).flatten[0]
 
 			#need http:// here so request_uri works
 			if(!@host.match(/http:\/\//))
@@ -57,13 +59,14 @@ module LiveLog
 			http = Net::HTTP.new(uri.host,uri.port)
 		
 			request = Net::HTTP::Post.new(uri.request_uri)
-			request.set_form_data({"filename"=>__FILE__, "logData"=>var,"lineNumber"=>callingFunc,"sessionID" =>@sessionID,"data"=>JSON.dump(var)})
+			request.set_form_data({"sessionID" =>@sessionID,"data"=>JSON.dump({"filename"=>fname, "logData"=>var,"lineNumber"=>callingLine})})
 
 			response = http.request(request)
 
-			if response.code!=200
+			puts response
+			if response.code.to_s != '200'
 				#I'm not OKAY!!!! -MCR
-				warn "Response from LiveLog Server not 200."
+				warn "Response from LiveLog Server was " + response.code.to_s
 			end
 
 		end
