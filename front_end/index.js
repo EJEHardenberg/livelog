@@ -30,7 +30,7 @@ function checkForNewContent(){
   var t = setInterval(function(){
     $.ajax({
       type: "POST",
-      url: "http://"+basedir+"/LiveLog/front_end/isLogUpdated.php",
+      url: "http://"+basedir+"front_end/isLogUpdated.php",
       data: {
         "sessionID": sessionID
       },
@@ -71,7 +71,7 @@ function retrieveLogData(){
   // grab server data
       $.ajax({
               type: "POST",
-              url: "http://"+basedir+"/LiveLog/front_end/LiveLogDisplay.php",
+              url: "http://"+basedir+"front_end/LiveLogDisplay.php",
               data: {
                 "getCurrentLog": true,
                 "sessionID": sessionID

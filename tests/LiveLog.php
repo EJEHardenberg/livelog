@@ -1,5 +1,6 @@
 <?php
 
+//B
 require_once("config/config.php");
 
 class LiveLog{

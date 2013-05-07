@@ -17,7 +17,12 @@ if($_POST['beginSession']){
 	//   $data = "posting";
   $sessionFilename = "logfiles/".$sessionID.".txt";
   $fhandle = fopen($sessionFilename, 'a+');
-  $wrt = fwrite($fhandle, $data);
+  if($fhandle){
+  	$wrt = fwrite($fhandle, $data);	
+  }else{
+  	error_log("Failed to open log file for appending due to fopen returning an invalid file handle");
+  }
+  
  }
  
 ?>

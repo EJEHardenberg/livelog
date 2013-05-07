@@ -1,7 +1,7 @@
 <?php
 
 //Include BASEDIR
-require_once("config/config.php");
+require_once("../config/config.php");
 
 class LiveLog{
   public $filename;
@@ -38,7 +38,7 @@ class LiveLog{
   
   private function beginNewLog(){
 //    $url = 'http://slimdowndesign.com/LiveLog/front_end/LiveLogCatch.php';
-$url = 'http://'.BASEDIR.'LiveLog/front_end/LiveLogCatch.php';
+$url = 'http://'.BASEDIR.'front_end/LiveLogCatch.php';
    $data = 'beginSession='.$this->sessionID;
    //open connection
    $ch = curl_init();
