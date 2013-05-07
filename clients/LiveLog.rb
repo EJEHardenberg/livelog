@@ -61,7 +61,10 @@ module LiveLog
 
 			response = http.request(request)
 
-			puts response
+			if response.code!=200
+				#I'm not OKAY!!!! -MCR
+				warn "Response from LiveLog Server not 200."
+			end
 
 		end
 	end
