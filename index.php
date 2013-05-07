@@ -7,6 +7,8 @@ include("tests/LiveLog.php");
 
 $ll = new LiveLog("index.php", "5b2124dacd65996bddd0bb6b332b0258");
 
+header('location:http://'.BASEDIR.'front_end/new_session.php');
+
 ?>
 <!doctype html>
 	<head>

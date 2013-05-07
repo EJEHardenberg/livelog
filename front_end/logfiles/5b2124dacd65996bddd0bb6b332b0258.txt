@@ -1,5 +1,0 @@
-<<<<<<< HEAD
-"foo"
-=======
-{\"logData\": \"ohhh yeaaaah\", \"lineNumber\": 10, \"filename\": \"test.py\"}
->>>>>>> 532c0ca2758fabbdaab4445ef417f673962a1b23
